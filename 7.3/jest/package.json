@@ -4,8 +4,25 @@
   "description": "jest test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "coverage": "jest --collectCoverage",
+    "eslint": "eslint",
+    "prettier": "prettier"
   },
+
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**"
+  ],
+
+  "coverageThreshold": {
+    "branches": 100,
+    "functions": 100,
+    "lines": 100
+},
+
   "keywords": [
     "jest",
     "test",

@@ -18,5 +18,8 @@
   "homepage": "https://github.com/0lgaPankeeva/jsaqa-code#readme",
   "devDependencies": {
     "playwright": "^1.29.1"
+  },
+  "dependencies": {
+    "eslint": "^8.31.0"
   }
 }

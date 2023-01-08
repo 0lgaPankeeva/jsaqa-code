@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright",
-    "eslint": "eslint",
-    "prettier": "prettier"
+    "test": "playwright"
+   
   },
   "author": "",
   "license": "ISC",

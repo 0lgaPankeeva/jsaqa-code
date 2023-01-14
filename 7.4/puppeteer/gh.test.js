@@ -33,6 +33,26 @@ describe("Github page tests", () => {
       visible: true,
     });
     const actual = await page.$eval(btnSelector, link => link.textContent);
-    expect(actual).toContain("Sign up for free", {timeout: 60000})
+    expect(actual).toContain("Get started with Team", {timeout: 60000})
+  });
+
+  describe("Should check titles for GitHub pages", () => {
+    test("Should check Pricing page", async () => {
+      await page.goto("https://github.com/pricing");
+      const title = await page.title();
+      expect(title).toContain("Pricing · Plans for every developer · GitHub")
+    }, 60000);
+  
+    test("Should check About page", async () => {
+      await page.goto("https://github.com/about");
+      const title = await page.title();
+      expect(title).toContain("About · GitHub")
+    }, 60000);
+  
+    test("Should check Shop page", async () => {
+      await page.goto("https://github.com/marketplace");
+      const title = await page.title();
+      expect(title).toContain("GitHub Marketplace · to improve your workflow · GitHub")
+    }, 60000);
   });
 });

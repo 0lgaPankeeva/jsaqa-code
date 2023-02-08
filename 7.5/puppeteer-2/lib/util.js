@@ -1,4 +1,4 @@
-const { clickElement, getText } = require("./commands.js");
+({ clickElement, getText } = require("./commands.js"))
 
 module.exports = {
   selectDateTime: async function (page, day, time) {

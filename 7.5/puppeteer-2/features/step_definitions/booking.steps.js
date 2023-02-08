@@ -2,9 +2,11 @@ const puppeteer = require("puppeteer");
 const chai = require("chai");
 const expect = chai.expect;
 const { Given, When, Then, Before, After } = require("@cucumber/cucumber");
-const { clickElement, getText } = require("C:\Users\panke\JavaScript автоматизация веб интерфейсов\jsaqa-code\7.5\puppeteer-2>");
+const { clickElement, getText } = require("./lib/commands.js");
+var {setDefaultTimeout} = require('@cucumber/cucumber');
+setDefaultTimeout(60 * 1000);
 
-Before({timeout: 30000}, async function () {
+Before({timeout: 60000}, async function () {
   const browser = await puppeteer.launch({ headless: false, slowMo: 50 });
   const page = await browser.newPage();
   this.browser = browser;
